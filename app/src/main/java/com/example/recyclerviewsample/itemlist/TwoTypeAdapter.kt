@@ -49,7 +49,7 @@ class TwotypeAdapter :
         return when(viewType){
             ContentType.HEADER.code -> {
                 val view = ItemTypeHeaderBinding
-                    .inflate(LayoutInflater.from(parent.context), parent, false)
+                    .inflate(LayoutInflater.from(parent.context), parent, false) // LayoutInflater.from(Context)는 오작동함
                 HeaderViewHolder(view.root)
             }
             else -> {
